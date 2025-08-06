@@ -1,0 +1,79 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navigation from '../components/Navigation.astro';
+
+---
+
+<BaseLayout title="Portifolio - Gabriel Rodrigues">
+  <Navigation />
+  
+  <main class="pt-16">
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800">
+      <div class="container mx-auto px-4 text-center">
+        <div class="max-w-4xl mx-auto">
+          <img 
+            src="/images/profile.jpg" 
+            alt="Foto de perfil" 
+            class="w-32 h-32 rounded-full mx-auto mb-8 border-4 border-white dark:border-gray-700 shadow-lg"
+          >
+          
+          <h1 class="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+  Olá, eu sou 
+  <br>
+  Gabriel Rodrigues
+  
+  <span id="typed-text" class="block text-white dark:text-gray-100"></span>
+</h1>
+
+<script type="module">
+  import Typed from 'https://cdn.skypack.dev/typed.js';
+
+  new Typed('#typed-text', {
+    strings: ['Desenvolvedor Web', 'Criador de Experiências Digitais'],
+    typeSpeed: 50,
+    backSpeed: 30,
+    loop: true
+  });
+</script>
+
+          
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a 
+              href="/projects" 
+              class="bg-primary-600 hover:bg-primary-700 text-white px-8 py-3 rounded-lg font-medium transition-colors shadow-lg hover:shadow-xl"
+            >
+              Ver Projetos
+            </a>
+            <a 
+              href="/contact" 
+              class="border-2 border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white px-8 py-3 rounded-lg font-medium transition-colors"
+            >
+              Entre em Contato
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Stats -->
+  <!-- <section class="py-20 bg-white dark:bg-gray-900">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          <div class="text-center">
+            <div class="text-4xl font-bold text-primary-600 dark:text-primary-400 mb-2">50+</div>
+            <div class="text-gray-600 dark:text-gray-300">Projetos Concluídos</div>
+          </div>
+          <div class="text-center">
+            <div class="text-4xl font-bold text-primary-600 dark:text-primary-400 mb-2">3+</div>
+            <div class="text-gray-600 dark:text-gray-300">Anos de Experiência</div>
+          </div>
+          <div class="text-center">
+            <div class="text-4xl font-bold text-primary-600 dark:text-primary-400 mb-2">100%</div>
+            <div class="text-gray-600 dark:text-gray-300">Satisfação do Cliente</div>
+          </div>
+        </div>
+      </div>
+    </section>-->
+  </main>
+</BaseLayout>

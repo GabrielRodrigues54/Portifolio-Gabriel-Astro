@@ -1,0 +1,89 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navigation from '../components/Navigation.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import { projects } from '../data/projects.js';
+---
+
+<BaseLayout title="Projetos - Gabriel Rodrigues">
+  <Navigation />
+  
+  <main class="pt-16">
+    <!-- Hero Section -->
+    <section class="py-20 bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800">
+      <div class="container mx-auto px-4">
+        <div class="text-center max-w-4xl mx-auto">
+          <h1 class="text-4xl md:text-6xl font-bold mb-6">
+            Meus <span class="text-primary-600 dark:text-primary-400">Projetos</span>
+          </h1>
+          <p class="text-xl text-gray-600 dark:text-gray-300 mb-8">
+            Uma seleção dos meus trabalhos mais recentes e projetos que me orgulho de ter desenvolvido
+          </p>
+          
+          <!-- Filter Buttons -->
+          <div class="flex flex-wrap justify-center gap-4 mb-12">
+            <button class="px-6 py-2 bg-primary-600 text-white rounded-full font-medium hover:bg-primary-700 transition-colors">
+              Todos
+            </button>
+            <button class="px-6 py-2 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-full font-medium hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors border border-gray-200 dark:border-gray-600">
+              React
+            </button>
+            <button class="px-6 py-2 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-full font-medium hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors border border-gray-200 dark:border-gray-600">
+              Next.js
+            </button>
+            <button class="px-6 py-2 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-full font-medium hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors border border-gray-200 dark:border-gray-600">
+              Python
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Grid 
+    <section class="py-20 bg-white dark:bg-gray-900">
+      <div class="container mx-auto px-4">
+        <!-- Featured Projects 
+        <div class="mb-16">
+          <h2 class="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white">
+            Projetos em Destaque
+          </h2>
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            {projects.filter(project => project.featured).map((project) => (
+              <ProjectCard project={project} />
+            ))}
+          </div>
+        </div>
+
+        <!-- All Projects 
+        <div>
+          <h2 class="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white">
+            Outros Projetos
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            {projects.filter(project => !project.featured).map((project) => (
+              <ProjectCard project={project} />
+            ))}
+          </div>
+        </div>
+        -->
+        <!-- Call to Action -->
+        <div class="text-center mt-16">
+          <div class="bg-gradient-to-r from-primary-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700 rounded-2xl p-8 max-w-2xl mx-auto">
+            <h3 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white">
+              Tem um projeto em mente?
+            </h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-6">
+              Vamos conversar sobre como posso ajudar a transformar sua ideia em realidade.
+            </p>
+            <a 
+              href="/contact" 
+              class="inline-block bg-primary-600 hover:bg-primary-700 text-white px-8 py-3 rounded-lg font-medium transition-colors shadow-lg hover:shadow-xl"
+            >
+              Entre em Contato
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

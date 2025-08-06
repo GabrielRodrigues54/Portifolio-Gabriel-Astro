@@ -1,0 +1,89 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navigation from '../components/Navigation.astro';
+---
+
+<BaseLayout title="Sobre - Gabriel Rodrigues">
+  <Navigation />
+  
+  <main class="pt-16">
+    <section class="py-20 bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto">
+          <h1 class="text-4xl md:text-6xl font-bold text-center mb-12 fade-up delay-100">
+            Sobre <span class="text-primary-600 dark:text-primary-400">Mim</span>
+          </h1>
+          
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <img 
+                src="/images/profilepicture.jpg" 
+                alt="Foto sobre mim" 
+                class="rounded-2xl shadow-2xl zoom-in delay-200 image-glow"
+              />
+            </div>
+            
+            <div class="space-y-6">
+              <h2 class="text-2xl font-semibold text-gray-900 dark:text-white">
+                Desenvolvedor apaixonado por tecnologia
+              </h2>
+              
+              <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+                Sou um desenvolvedor full stack em formação, apaixonado por tecnologia e movido pelo desejo 
+                de impactar a vida de microempreendedores através de soluções digitais. Comecei minha jornada 
+                na programação com Python e, desde então, venho me aprofundando em tecnologias modernas como 
+                JavaScript, typescript, React, Next.js com foco no desenvolvimento prático.
+              </p>
+              
+              <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+                Atualmente, estou desenvolvendo projetos próprios — como sistemas SaaS e Sites modernos — 
+                Minha meta é clara: 
+                criar produtos e serviços que resolvam problemas reais e construam liberdade por 
+                meio da tecnologia.
+              </p>
+
+              <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+                Trabalho todos os dias para unir código, criatividade e propósito — e estou sempre aberto a 
+                novos desafios, aprendizados e colaborações.
+              </p>
+              
+              <div class="flex flex-wrap gap-3">
+                <span class="bg-primary-100 dark:bg-primary-900/30 text-primary-800 dark:text-primary-300 px-3 py-1 rounded-full text-sm">
+                  JavaScript
+                </span>
+                <span class="bg-primary-100 dark:bg-primary-900/30 text-primary-800 dark:text-primary-300 px-3 py-1 rounded-full text-sm">
+                  React
+                </span>
+                <span class="bg-primary-100 dark:bg-primary-900/30 text-primary-800 dark:text-primary-300 px-3 py-1 rounded-full text-sm">
+                  Node.js
+                </span>
+                <span class="bg-primary-100 dark:bg-primary-900/30 text-primary-800 dark:text-primary-300 px-3 py-1 rounded-full text-sm">
+                  Python
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <style>
+    .image-glow {
+      position: relative;
+      border: 4px solid transparent;
+      border-radius: 1rem; /* igual a rounded-2xl */
+      box-shadow:
+        0 0 8px rgba(59, 130, 246, 0.6), /* azul */
+        0 0 15px rgba(59, 130, 246, 0.4);
+      transition: box-shadow 0.3s ease;
+    }
+    .image-glow:hover {
+      box-shadow:
+        0 0 12px rgba(59, 130, 246, 0.8),
+        0 0 25px rgba(59, 130, 246, 0.6),
+        0 0 40px rgba(147, 197, 253, 0.8);
+      cursor: pointer;
+    }
+  </style>
+</BaseLayout>

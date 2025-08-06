@@ -1,0 +1,167 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navigation from '../components/Navigation.astro';
+import SkillCard from '../components/SkillCard.astro';
+import { skills } from '../data/skills.js';
+---
+
+<BaseLayout title="Habilidades - Gabriel Rodrigues">
+  <Navigation />
+  
+  <main class="pt-16">
+    <!-- Hero Section -->
+    <section class="py-20 bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800">
+      <div class="container mx-auto px-4">
+        <div class="text-center max-w-4xl mx-auto">
+          <h1 class="text-4xl md:text-6xl font-bold mb-6">
+            Minhas <span class="text-primary-600 dark:text-primary-400">Habilidades</span>
+          </h1>
+          <p class="text-xl text-gray-600 dark:text-gray-300 mb-8">
+            Tecnologias e ferramentas que domino para criar soluções completas e eficientes
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Sections -->
+    <section class="py-20 bg-white dark:bg-gray-900">
+      <div class="container mx-auto px-4">
+        
+        <!-- Frontend Skills -->
+        <div class="mb-20">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+              🎨 Frontend Development
+            </h2>
+            <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+              Criando interfaces modernas, responsivas e com excelente experiência do usuário
+            </p>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-7xl mx-auto">
+            {skills.frontend.map((skill) => (
+              <SkillCard skill={skill} />
+            ))}
+          </div>
+        </div>
+
+        <!-- Backend Skills -->
+        <div class="mb-20">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+              ⚙️ Backend Development
+            </h2>
+            <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+              Desenvolvendo APIs robustas e arquiteturas escaláveis
+            </p>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-7xl mx-auto">
+            {skills.backend.map((skill) => (
+              <SkillCard skill={skill} />
+            ))}
+          </div>
+        </div>
+
+        <!-- Tools & Others -->
+        <div class="mb-20">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+              🛠️ Ferramentas & DevOps
+            </h2>
+            <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+              Ferramentas e tecnologias para otimizar o desenvolvimento e deploy
+            </p>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-7xl mx-auto">
+            {skills.tools.map((skill) => (
+              <SkillCard skill={skill} />
+            ))}
+          </div>
+        </div>
+        
+        <!-- 
+        <div class="max-w-4xl mx-auto">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+              📈 Experiência Profissional
+            </h2>
+            <p class="text-gray-600 dark:text-gray-300">
+              Minha jornada no desenvolvimento de software
+            </p>
+          </div>
+
+          <div class="relative">
+            
+            <div class="absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-gray-200 dark:bg-gray-700"></div>
+            
+            
+            <div class="space-y-12">
+              
+              <div class="relative flex items-center">
+                <div class="flex-1 pr-8 text-right">
+                  <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">
+                      Desenvolvedor Full Stack
+                    </h3>
+                    <p class="text-primary-600 dark:text-primary-400 font-medium mb-2">
+                      Empresa Tech • 2022 - Presente
+                    </p>
+                    <p class="text-gray-600 dark:text-gray-300">
+                      Desenvolvimento de aplicações web modernas usando React, Node.js e AWS
+                    </p>
+                  </div>
+                </div>
+                
+                <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-primary-600 rounded-full border-4 border-white dark:border-gray-900"></div>
+                <div class="flex-1 pl-8"></div>
+              </div>
+
+              
+              <div class="relative flex items-center">
+                <div class="flex-1 pr-8"></div>
+                <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-primary-600 rounded-full border-4 border-white dark:border-gray-900"></div>
+                
+                <div class="flex-1 pl-8">
+                  <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">
+                      Desenvolvedor Frontend
+                    </h3>
+                    <p class="text-primary-600 dark:text-primary-400 font-medium mb-2">
+                      Startup Inovadora • 2021 - 2022
+                    </p>
+                    <p class="text-gray-600 dark:text-gray-300">
+                      Criação de interfaces responsivas e otimização de performance
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              
+              <div class="relative flex items-center">
+                <div class="flex-1 pr-8 text-right">
+                  <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">
+                      Desenvolvedor Junior
+                    </h3>
+                    <p class="text-primary-600 dark:text-primary-400 font-medium mb-2">
+                      Primeira Tech • 2020 - 2021
+                    </p>
+                    <p class="text-gray-600 dark:text-gray-300">
+                      Início da carreira com foco em JavaScript e desenvolvimento web
+                    </p>
+                  </div>
+                </div>
+                
+                <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-primary-600 rounded-full border-4 border-white dark:border-gray-900"></div>
+                <div class="flex-1 pl-8"></div>
+                -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

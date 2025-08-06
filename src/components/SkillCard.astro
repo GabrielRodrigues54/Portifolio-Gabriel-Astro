@@ -1,0 +1,36 @@
+---
+// filepath: c:\Users\Pichau\OneDrive\Desktop\astro\astro-test\portifolio\src\components\SkillCard.astro
+export interface Props {
+  skill: {
+    name: string;
+    level: number;
+    icon: any;
+  };
+}
+
+const { skill } = Astro.props;
+const Icon = skill.icon;
+---
+
+<div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+  <div class="flex items-center justify-between mb-4">
+    <div class="flex items-center space-x-3">
+      <span class="text-2xl">
+        {Icon ? <Icon size={28} /> : null}
+      </span>
+      <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+        {skill.name}
+      </h3>
+    </div>
+    <span class="text-primary-600 dark:text-primary-400 font-semibold">
+      {skill.level}%
+    </span>
+  </div>
+  
+  <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
+    <div 
+      class="bg-gradient-to-r from-primary-500 to-primary-600 h-3 rounded-full transition-all duration-1000 ease-out"
+      style={`width: ${skill.level}%`}
+    ></div>
+  </div>
+</div>
