@@ -1,12 +1,12 @@
 export const projects = [
   {
     id: 1,
-    title: "E-commerce Moderno",
-    description: "Plataforma completa de e-commerce com React, Node.js e MongoDB",
-    image: "/images/projects/ecommerce.jpg",
-    tags: ["React", "Node.js", "MongoDB", "Stripe"],
-    github: "https://github.com/seuusuario/ecommerce",
-    demo: "https://ecommerce-demo.com",
+    title: "Calculadora de Custo da lavoura ",
+    description: "calculadora de custo para agricultores",
+    image: "/images/agro-custo-screenshot.jpg",
+    tags: ["React", "Node.js", "Vite"],
+    github: "https://github.com/GabrielRodrigues54/agro-custo-na-mao",
+    demo: "https://agro-custo-na-mao.vercel.app",
     featured: true
   },
   {
